@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BibleBooster — Production Brands</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="header">
+      <div class="logo-wrap">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="#1D9E75"/>
+          <path d="M10 9h10a7 7 0 0 1 0 14H10V9Z" fill="white" opacity="0.9"/>
+          <path d="M10 23h12a4 4 0 0 1 0 8H10V23Z" fill="white" opacity="0.6"/>
+          <line x1="10" y1="16" x2="26" y2="16" stroke="#1D9E75" stroke-width="1.5"/>
+        </svg>
+        <h1 class="site-title">BibleBooster Brands</h1>
+      </div>
+      <p class="site-subtitle">All production deployments across global Bible Societies</p>
+    </header>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search country, org, or brand key…"
+        oninput="filterCards()"
+        autocomplete="off"
+      />
+
+      <div class="filter-group" id="filterGroup">
+        <button class="filter-btn active" onclick="setTier('all', this)">All</button>
+        <button class="filter-btn" onclick="setTier('plus', this)">Plus</button>
+        <button class="filter-btn" onclick="setTier('essential', this)">Essential</button>
+        <button class="filter-btn" onclick="setTier('test', this)">Test</button>
+      </div>
+
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <main class="grid" id="brandGrid"></main>
+
+  </div>
+
+  <script src="brands.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
