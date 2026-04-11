@@ -64,7 +64,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://bsk.ibep-prod.com/",
     commercial: "https://bible.bskorea.or.kr/",
-    logoUrl:    logo("bsk"),
+    logoUrl:    "logos/kor.png",
   },
   {
     key:        "bsl",
