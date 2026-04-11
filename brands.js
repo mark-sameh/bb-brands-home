@@ -18,6 +18,16 @@ const logo = (key) => `${BASE_LOGO}/${key}/${key}.logov4.png`;
 
 const BRANDS = [
   {
+    key:        "biblebooster",
+    flag:       "🌍",
+    country:    "Global",
+    org:        "BibleBooster",
+    tier:       "plus",
+    prodUrl:    "https://biblebooster.ibep-prod.com/",
+    commercial: "https://biblebooster.ibep-prod.com/",
+    logoUrl:    logo("biblebooster"),
+  },
+  {
     key:        "nbg",
     flag:       "🇳🇱",
     country:    "Netherlands",
@@ -36,16 +46,6 @@ const BRANDS = [
     prodUrl:    "https://abf.ibep-prod.com/",
     commercial: "",
     logoUrl:    logo("abf"),
-  },
-  {
-    key:        "biblebooster",
-    flag:       "🌍",
-    country:    "Global",
-    org:        "BibleBooster",
-    tier:       "plus",
-    prodUrl:    "https://biblebooster.ibep-prod.com/",
-    commercial: "https://biblebooster.ibep-prod.com/",
-    logoUrl:    logo("biblebooster"),
   },
   {
     key:        "bsind",
@@ -76,16 +76,6 @@ const BRANDS = [
     prodUrl:    "https://bsl.ibep-prod.com/",
     commercial: "https://www.manobiblija.lt/",
     logoUrl:    logo("bsl"),
-  },
-  {
-    key:        "bsrus",
-    flag:       "🇷🇺",
-    country:    "Russia",
-    org:        "Bible Society of Russia",
-    tier:       "essential",
-    prodUrl:    "https://bsrus.ibep-prod.com/",
-    commercial: "",
-    logoUrl:    logo("bsrus"),
   },
   {
     key:        "bssa",
