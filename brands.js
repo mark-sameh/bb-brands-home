@@ -10,7 +10,11 @@
  *   tier        — "plus" | "essential" | "test"
  *   prodUrl     — internal production URL (ibep-prod.com)
  *   commercial  — public-facing commercial URL (empty string if unknown)
+ *   logoUrl     — brand logo from Firebase storage
  */
+
+const BASE_LOGO = "https://storage.googleapis.com/ibep-prod.appspot.com/brand";
+const logo = (key) => `${BASE_LOGO}/${key}/${key}.logov4.png`;
 
 const BRANDS = [
   {
@@ -20,7 +24,8 @@ const BRANDS = [
     org:        "Nederlands Bijbelgenootschap",
     tier:       "plus",
     prodUrl:    "https://nbg.ibep-prod.com/",
-    commercial: "https://debijbel.nl/",
+    commercial: "https://www.debijbel.nl/",
+    logoUrl:    logo("nbg"),
   },
   {
     key:        "abf",
@@ -30,6 +35,7 @@ const BRANDS = [
     tier:       "essential",
     prodUrl:    "https://abf.ibep-prod.com/",
     commercial: "",
+    logoUrl:    logo("abf"),
   },
   {
     key:        "biblebooster",
@@ -39,6 +45,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://biblebooster.ibep-prod.com/",
     commercial: "https://biblebooster.ibep-prod.com/",
+    logoUrl:    logo("biblebooster"),
   },
   {
     key:        "bsind",
@@ -48,6 +55,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://bsind.ibep-prod.com/",
     commercial: "https://www.indian.bible/",
+    logoUrl:    logo("bsind"),
   },
   {
     key:        "bsk",
@@ -57,6 +65,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://bsk.ibep-prod.com/",
     commercial: "https://bible.bskorea.or.kr/",
+    logoUrl:    logo("bsk"),
   },
   {
     key:        "bsl",
@@ -65,7 +74,8 @@ const BRANDS = [
     org:        "Bible Society of Lithuania",
     tier:       "plus",
     prodUrl:    "https://bsl.ibep-prod.com/",
-    commercial: "https://manobiblija.lt/",
+    commercial: "https://www.manobiblija.lt/",
+    logoUrl:    logo("bsl"),
   },
   {
     key:        "bsrus",
@@ -75,6 +85,7 @@ const BRANDS = [
     tier:       "essential",
     prodUrl:    "https://bsrus.ibep-prod.com/",
     commercial: "",
+    logoUrl:    logo("bsrus"),
   },
   {
     key:        "bssa",
@@ -84,6 +95,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://bssa.ibep-prod.com/",
     commercial: "https://www.biblesa.co.za/",
+    logoUrl:    logo("bssa"),
   },
   {
     key:        "ca",
@@ -93,6 +105,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://ca.ibep-prod.com/",
     commercial: "https://www.my-bible.ca/",
+    logoUrl:    logo("ca"),
   },
   {
     key:        "diebibel",
@@ -102,6 +115,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://diebibel.ibep-prod.com/",
     commercial: "https://www.die-bibel.de/",
+    logoUrl:    logo("diebibel"),
   },
   {
     key:        "kor",
@@ -110,7 +124,8 @@ const BRANDS = [
     org:        "Korea alt brand",
     tier:       "essential",
     prodUrl:    "https://kor.ibep-prod.com/",
-    commercial: "",
+    commercial: "https://bible.bskorea.or.kr/",
+    logoUrl:    logo("kor"),
   },
   {
     key:        "sbarg",
@@ -119,7 +134,8 @@ const BRANDS = [
     org:        "Sociedad Bíblica Argentina",
     tier:       "plus",
     prodUrl:    "https://sbarg.ibep-prod.com/",
-    commercial: "https://biblia.sba.org.ar/",
+    commercial: "https://www.biblia.sba.org.ar/",
+    logoUrl:    logo("sbarg"),
   },
   {
     key:        "sbb",
@@ -128,7 +144,8 @@ const BRANDS = [
     org:        "Sociedade Bíblica do Brasil",
     tier:       "plus",
     prodUrl:    "https://sbb.ibep-prod.com/",
-    commercial: "https://sbb.org.br/",
+    commercial: "https://www.sbb.org.br/",
+    logoUrl:    logo("sbb"),
   },
   {
     key:        "sbp",
@@ -137,7 +154,8 @@ const BRANDS = [
     org:        "Sociedade Bíblica de Portugal",
     tier:       "plus",
     prodUrl:    "https://sbp.ibep-prod.com/",
-    commercial: "https://biblia.pt/",
+    commercial: "https://www.biblia.pt/",
+    logoUrl:    logo("sbp"),
   },
   {
     key:        "sbperu",
@@ -147,6 +165,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://sbperu.ibep-prod.com/",
     commercial: "https://www.sbp.org.pe/",
+    logoUrl:    logo("sbperu"),
   },
   {
     key:        "sbpy",
@@ -156,6 +175,7 @@ const BRANDS = [
     tier:       "essential",
     prodUrl:    "https://sbpy.ibep-prod.com/",
     commercial: "https://sbp.org.py/",
+    logoUrl:    logo("sbpy"),
   },
   {
     key:        "sbs",
@@ -165,6 +185,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://sbs.ibep-prod.com/",
     commercial: "https://www.bibeln.se/",
+    logoUrl:    logo("sbs"),
   },
   {
     key:        "sp",
@@ -173,7 +194,8 @@ const BRANDS = [
     org:        "Suomen Pipliaseura",
     tier:       "plus",
     prodUrl:    "https://sp.ibep-prod.com/",
-    commercial: "https://raamattu.fi/",
+    commercial: "https://www.raamattu.fi/",
+    logoUrl:    logo("sp"),
   },
   {
     key:        "suriname",
@@ -182,7 +204,8 @@ const BRANDS = [
     org:        "Suriname Bible Society",
     tier:       "plus",
     prodUrl:    "https://suriname.ibep-prod.com/",
-    commercial: "https://surinamebiblesoc.org/",
+    commercial: "https://www.surinamebiblesoc.org/",
+    logoUrl:    logo("suriname"),
   },
   {
     key:        "testbrand",
@@ -192,6 +215,7 @@ const BRANDS = [
     tier:       "test",
     prodUrl:    "https://testbrand.ibep-prod.com/",
     commercial: "",
+    logoUrl:    logo("testbrand"),
   },
   {
     key:        "zwe",
@@ -201,5 +225,6 @@ const BRANDS = [
     tier:       "essential",
     prodUrl:    "https://zwe.ibep-prod.com/",
     commercial: "https://biblesociety-zimbabwe.org/",
+    logoUrl:    logo("zwe"),
   },
 ];

@@ -38,7 +38,12 @@ function buildCard(brand) {
 
   card.innerHTML = `
     <div class="card-top">
-      <span class="flag" aria-hidden="true">${brand.flag}</span>
+      <img
+        class="brand-logo"
+        src="${brand.logoUrl}"
+        alt="${brand.org} logo"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"
+      /><span class="flag" aria-hidden="true" style="display:none;">${brand.flag}</span>
       <span class="tier-pill ${cls}">${label}</span>
     </div>
     <div class="card-country">${brand.country}</div>
