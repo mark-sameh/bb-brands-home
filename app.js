@@ -78,6 +78,11 @@ function filterCards() {
     return matchTier && matchQuery;
   });
 
+  results.sort((a, b) => {
+    const order = { plus: 0, essential: 1, test: 2 };
+    return order[a.tier] - order[b.tier];
+  });
+
   count.textContent =
     results.length + " brand" + (results.length !== 1 ? "s" : "");
 
