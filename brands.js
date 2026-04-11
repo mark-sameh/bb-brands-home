@@ -153,7 +153,7 @@ const BRANDS = [
     org:        "Sociedade Bíblica del Perú",
     tier:       "plus",
     prodUrl:    "https://sbperu.ibep-prod.com/",
-    commercial: "https://www.sbp.org.pe/",
+    commercial: "https://www.google.com/search?q=Sociedad+Biblica+Peruana+sbp.org.pe",
     logoUrl:    logo("sbperu"),
   },
   {
