@@ -13,8 +13,7 @@
  *   logoUrl     — brand logo from Firebase storage
  */
 
-const BASE_LOGO = "https://storage.googleapis.com/ibep-prod.appspot.com/brand";
-const logo = (key) => `${BASE_LOGO}/${key}/${key}.logov4.png`;
+const logo = (key) => `logos/${key}.png`;
 
 const BRANDS = [
   {
@@ -105,7 +104,7 @@ const BRANDS = [
     tier:       "plus",
     prodUrl:    "https://diebibel.ibep-prod.com/",
     commercial: "https://www.die-bibel.de/",
-    logoUrl:    logo("diebibel"),
+    logoUrl:    "logos/diebibel.svg",
   },
   {
     key:        "kor",
