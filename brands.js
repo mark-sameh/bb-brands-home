@@ -99,9 +99,9 @@ const BRANDS = [
   {
     key:        "kor",
     flag:       "🇰🇷",
-    country:    "Korea (alt)",
-    org:        "Korea alt brand",
-    tier:       "essential",
+    country:    "South Korea",
+    org:        "Korean Bible Society",
+    tier:       "plus",
     prodUrl:    "https://kor.ibep-prod.com/",
     commercial: "https://bible.bskorea.or.kr/",
     logoUrl:    logo("kor"),
